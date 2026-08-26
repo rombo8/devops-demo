@@ -1,7 +1,7 @@
 services:
 
   app:
-    build: .
+    image: ghcr.io/rombo8/devops-demo:latest
     ports:
       - "5000:5000"
     environment:
@@ -44,7 +44,6 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-
 
 volumes:
   postgres_data:
