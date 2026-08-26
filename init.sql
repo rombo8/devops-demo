@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS visits (
+    id INTEGER PRIMARY KEY,
+    count INTEGER NOT NULL
+);
+
+INSERT INTO visits (id, count)
+VALUES (1, 0)
+ON CONFLICT (id) DO NOTHING;
