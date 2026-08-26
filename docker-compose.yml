@@ -1,0 +1,15 @@
+services:
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: devops_demo
+      POSTGRES_USER: devops
+      POSTGRES_PASSWORD: devops_password
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
