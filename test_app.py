@@ -45,6 +45,6 @@ def test_homepage_from_redis(mock_redis):
 
     response = client.get("/")
 
-    assert response.status_code == 201
+    assert response.status_code == 200
     assert b"visitor #99" in response.data
     assert b"Redis cache" in response.data
